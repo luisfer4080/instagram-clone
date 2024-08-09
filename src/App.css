@@ -1,0 +1,853 @@
+
+/* Tags elements styles */
+
+h2{
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px
+}
+
+/* Root Styles */
+
+/*.root-container{
+  width: 100%;
+}*/
+
+.root{
+  justify-content: center;
+  margin: 32px auto 0px auto;
+  padding: 0px 0px 32px 0px;
+  font-size: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-shrink: 0;
+  align-items: stretch;
+  flex-direction: row;
+  flex-grow: 1;
+  vertical-align: baseline;
+}
+
+.root__image{
+  background-size: 468.32px 634.15px;
+  height: 581.15px;
+  margin: 0px 32px 12px 0px;
+  background-image: url(/src/images/static/home-phones.png);
+  align-self: center;
+  background-position: -46px 0;
+  flex-basis: 380.32px;
+  display: block;
+}
+
+.authot__container{
+  justify-content: center;
+  margin: 32px auto 0px auto;
+  width: 100%;
+  text-align: center;
+}
+
+.author__title{
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Login Container styles */
+
+.root__login{
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-top: 12px;
+  max-width: 350px;
+  line-height: 18px;
+  font-size: 100%;
+}
+
+.login{
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 1px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  font-size: 100%;
+  margin: 0px 0px 10px;
+  padding: 10px 0px;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.login__logo{
+  margin-top: 36px;
+  overflow-y: visible;
+  margin-bottom: 12px;
+  border-bottom-left-radius: 0px;
+  background-color: transparent;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  border-bottom-right-radius: 0px;
+  flex-shrink: 0;
+  align-items: stretch;
+  overflow-x: visible;
+  align-self: auto;
+  justify-content: flex-start;
+  position: relative;
+  flex-grow: 0;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.logo__img{
+  background-image: url(/src/images/icons/instagram-text-icon.svg); 
+  background-size: auto; 
+  width: 175px; 
+  height: 51px; 
+  background-repeat: no-repeat; 
+  display: inline-block;
+}
+
+.login__form{
+  margin-bottom: 10px;
+  max-width: 350px;
+  width: 100%;
+}
+
+.login__form__container{
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+.login__form__input__container{
+  overflow-y: visible;
+  margin-top: 24px;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  border-bottom-right-radius: 0px;
+  flex-shrink: 0;
+  align-items: stretch;
+  overflow-x: visible;
+  align-self: auto;
+  justify-content: flex-start;
+  position: relative;
+  flex-grow: 0;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.login__form__input__margin{
+  margin: 0px 40px 6px 40px;
+}
+
+
+.login__form__input{
+  font-size: 14px;
+  border: 1px solid rgb(219, 219, 219);
+  background-color: rgb(250, 250, 250);
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  flex-direction: row;
+  position: relative;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.login__form__input__label{
+  border: 0;
+  display: flex;
+  flex: 1 0 0px;
+  font-size: 14px;
+  height: 36px;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.label__text{
+  border: 0;
+  color: rgb(115,115,115);
+  font-size: 12px;
+  height: 36px;
+  left: 8px;
+  line-height: 36px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  text-overflow: ellipsis;
+  transition: 0.3s;
+}
+
+.label__imput{
+  font-size: 14px;
+  text-align: left;
+  background-color: rgb(250,250,250);
+  border: 0;
+  flex: 1 0 auto;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 11px 0 7px 8px;
+  text-overflow: ellipsis;
+}
+
+.label__imput:valid ~ .label__text,
+.label__imput:focus ~ .label__text{
+  font-size: 9px;
+  color: rgb(115,115,115);
+  top: -10px;
+  left: 8px;
+}
+
+.login__form__button__container{
+  overflow-y: visible;
+  background-color: transparent;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  margin: 8px 40px;
+  flex-shrink: 0;
+  align-items: stretch;
+  align-self: auto;
+  overflow-x: visible;
+  cursor: pointer;
+  justify-content: flex-start;
+  position: relative;
+  flex-grow: 0;
+}
+
+.login__form__button{
+  background-color: rgb(0, 149, 246);
+  opacity: .7;
+  pointer-events: none;
+  border-radius: 8px;
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 7px 16px;
+  text-overflow: ellipsis;
+  width: auto;
+  line-height: 18px;
+  border: none;
+}
+
+.or__divider__container{
+  margin: 10px 40px 18px;
+  display: block;
+}
+
+.or__divider{
+  display: flex;
+  flex-direction: row;
+}
+
+.or__divider__line{
+  top: 0.45em;
+  flex-shrink: 1;
+  height: 1px;
+  position: relative;
+  flex-grow: 1;
+  background-color: rgb(219, 219, 219);
+  display: block;
+}
+
+.or__divider__text{
+  text-transform: uppercase;
+  margin: 0px 18px;
+  padding: 0px;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-grow: 0;
+  font-weight: 600;
+  color: rgb(115, 115, 115);
+  align-items: stretch;
+  font-size: .8125rem;
+  line-height: 1.1538;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.facebook__login{
+  overflow-y: visible;
+  overflow-x: visible;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  margin: 8px 40px;
+  align-items: stretch;
+  align-self: auto;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.facebook__login__white__button{
+  border: 0;
+  color: rgb(0,149,246);
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  background: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  pointer-events: auto;
+  text-overflow: ellipsis;
+  width: auto;
+  line-height: 18px;
+}
+
+.facebook__login__image{
+  border: 0;
+  display: inline-block;
+  font-size: 100%;
+  margin: 0;
+  margin-right: 8px;
+  padding: 0;
+  position: relative;
+  top: 3px;
+  vertical-align: baseline;
+  background-repeat: no-repeat;
+  background-position: -414px -259px;
+  height: 16px;
+  width: 16px;
+  background-image: url(https://static.cdninstagram.com/rsrc.php/v3/y5/r/TJztmXpWTmS.png);
+  color: rgb(0, 149, 246);
+  cursor: pointer;
+  text-align: center;
+}
+
+.facebook__login__text{
+  color: #385185;
+}
+
+.forget__password__link{
+  color: rgb(0, 55, 107);
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 12px!important;
+  text-align: center!important;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0;
+  background-color: transparent;
+  touch-action: manipulation;
+  box-sizing: border-box;
+  cursor: pointer;
+  list-style: none;
+  outline: none;
+  width: 100%;
+}
+
+.signup__link__container{
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 1px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.signup__text{
+  line-height: 18px;
+  font-size: 14px;
+  overflow-y: visible;
+  overflow-x: visible;
+  font-weight: 400;
+  min-width: 0;
+  margin-bottom: 0!important;
+  margin-right: 0!important;
+  margin-top: 0!important;
+  margin-left: 0!important;
+  word-wrap: break-word;
+  word-break: break-word;
+  color: rgb(115, 115, 115);
+  position: relative;
+  display: block;
+  white-space: pre-line;
+  max-width: 100%;
+}
+
+.signup__link{
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  margin: 15px;
+  text-align: center;
+}
+
+.signup__link__a{
+  text-decoration: none;
+  color: rgb(0, 149, 246);
+  display: inline;
+  padding: 0;
+  margin: 0px 0px 0px 1.5px;
+  border: 0;
+  background-color: transparent;
+  touch-action: manipulation;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: inherit;
+  list-style: none;
+  outline: none;
+}
+
+.get__app__container{
+  flex-direction: column;
+  display: flex;
+}
+
+.get__app{
+  border: 0;
+  color: rgb(0,0,0);
+  font: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 10px 20px 10px 20px;
+  padding: 0;
+  text-align: center;
+  vertical-align: baseline;
+}
+
+.get__app__text{
+  line-height: 18px;
+  font-size: 14px;
+  font-weight: 400;
+  overflow-y: visible;
+  min-width: 0;
+  margin-bottom: 0!important;
+  margin-right: 0!important;
+  margin-left: 0!important;
+  margin-top: 0!important;
+  color: rgb(0,0,0);
+  text-align: center;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-x: visible;
+  position: relative;
+  display: block;
+  white-space: pre-line;
+  max-width: 100%;
+}
+
+.get__it__from{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+
+.get__it__from__google{
+  text-decoration: none;
+  margin-right: 8px!important;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 0;
+  padding-left: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  display: inline;
+  touch-action: manipulation;
+  background-color: transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: inherit;
+  list-style: none;
+  outline: none;
+}
+
+.google__play__img{
+  height: 40px;
+  border: 0;
+}
+
+.get__it__from__microsoft{
+  margin-right: 0px!important;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 0;
+  padding-left: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  text-decoration: none;
+  display: inline;
+  background-color: transparent;
+  touch-action: manipulation;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: inherit;
+  list-style: none;
+  outline: none;
+}
+
+.microsoft__img{
+  height: 40px;
+  border: 0;
+}
+
+/* Sign up page styles */
+
+.signup__container{
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-y: visible;
+  overflow-x: visible;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.signup__main{
+  background-color: rgb(255, 255, 255);
+  align-items: stretch;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin: 0;
+  order: 4;
+  padding: 0;
+  position: relative;
+}
+
+.signup__main__container{
+  min-height: 100%;
+  min-width: 0;
+  margin-bottom: 44px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  justify-content: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  align-self: auto;
+  overflow-y: visible;
+  overflow-x: visible;
+  position: relative;
+}
+
+.signup{
+  color: rgb(0,0,0);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  margin-top: 12px;
+  max-width: 350px;
+}
+
+.signup__element{
+  align-items: center;
+  background-color: rgb(255,255,255);
+  border: 1px solid rgb(219,219,219);
+  border-radius: 1px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0 0 10px;
+  padding: 10px 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.signup__title{
+  color: rgb(115,115,115);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0 40px 10px;
+  text-align: center;
+  padding: 0;
+}
+
+.google__blue{
+  overflow-y: visible;
+  overflow-x: visible;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin: 8px 40px;
+  align-items: stretch;
+  align-self: auto;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.google__blue__button{
+  background-color: rgb(0, 149, 246);
+  border: none;
+  border-radius: 8px;
+  opacity: .7;
+  color: rgb(255, 255, 255);
+  position: relative;
+  text-align: center;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 7px 16px!important;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-transform: inherit;
+  width: auto;
+  margin: 0;
+}
+
+.google__white__logo{
+  border: 0;
+  display: inline-block;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  margin-right: 15px;
+  padding: 0;
+  position: relative;
+  top: 3px;
+  vertical-align: baseline;
+  height: 16px;
+  width: 16px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+
+
+.signup__form{
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  max-width: 350px;
+  padding: 0;
+  vertical-align: baseline;
+  color: rgb(0, 0, 0);
+  direction: ltr;
+}
+
+.signup__form__text{
+  color: rgb(115,115,115);
+  font-size: 12px;
+  line-height: 16px;
+  margin: 10px 40px;
+  text-align: center;
+}
+
+.signup__form__span{
+  line-height: 16px;
+  --base-line-clamp-line-height: 16px;
+  overflow-y: visible;
+  overflow-x: visible;
+  font-weight: 400;
+  min-width: 0;
+  max-width: 100%;
+  margin-bottom: 0!important;
+  margin-right: 0!important;
+  margin-left: 0!important;
+  margin-top: 0!important;
+  word-wrap: break-word;
+  word-break: break-word;
+  color: rgb(115, 115, 115);
+  position: relative;
+  display: block;
+  white-space: pre-line;
+  font-size: 12px;
+}
+
+.signup__form__span__top{
+  line-height: 16px;
+  display: inline;
+  font-weight: 400;
+  min-width: 0;
+  margin-bottom: 0!important;
+  margin-right: 0!important;
+  margin-left: 0!important;
+  margin-top: 0!important;
+  word-wrap: break-word;
+  word-break: break-word;
+  color: rgb(115, 115, 115);
+  white-space: pre-line;
+  font-size: 12px;
+  max-width: 100%;
+}
+
+.signup__form__span__top__link{
+  text-decoration: none;
+  display: inline;
+  background-color: transparent;
+  padding: 0 2px;
+  margin: 0;
+  border: 0;
+  touch-action: manipulation;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  text-align: inherit;
+  list-style: none;
+  outline: none;
+  color: rgb(0, 55, 107);
+}
+
+.signup__blue{
+  overflow-y: visible;
+  overflow-x: visible;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  align-items: stretch;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.signup__blue__button{
+  background-color: rgb(0, 149, 246);
+  opacity: .7;
+  border: none;
+  pointer-events: none;
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  position: relative;
+  text-align: center;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 7px 16px!important;
+  pointer-events: auto;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-transform: inherit;
+  width: auto;
+}
+
+.error__alert{
+  width: 80%;
+  height: 40px;
+  margin: 8px auto;
+  background-color: rgb(236, 83, 83);
+  display: flex;
+  border-radius: 8px;
+}
+
+.error__alert__text{
+  width: 80%;
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: white;
+  font-weight: 500;
+  margin: auto 15px;
+}
+
+.error__alert__x{
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: white;
+  font-weight: 450;
+  margin: auto auto auto 0px;
+  width: 20px;
+  cursor: pointer;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Media querys */
+
+@media (min-width: 736px){
+  .facebook-white-logo {
+      top: 2px;
+  }
+}
+
+
+
