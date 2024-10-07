@@ -1,15 +1,18 @@
 import useFollowUser from "../../hooks/useFollowUser";
+import { Show } from "@chakra-ui/react";
 
 export default function Profileheader({profile}){
     const { isFollowing, isUpdating, handleFollowUser } = useFollowUser(profile?.uid);
 
     return (
         <div className="profile__user">
-            <a href='#' className="profile__username" role="link" tabIndex="0">
-                <h2 className="profile__username__h2" dir="auto">
-                    {profile && profile.username}
-                </h2>
-            </a>
+            <Show above="sm">
+                <a href='#' className="profile__username" role="link" tabIndex="0">
+                    <h2 className="profile__username__h2" dir="auto">
+                        {profile && profile.username}
+                    </h2>
+                </a>
+            </Show>
             <div className="profile__user__links__container">
                 <div className="profile__user__links">  
                     <div className="follow__link" >

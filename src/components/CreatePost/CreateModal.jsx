@@ -274,8 +274,6 @@ export default function CreateModal (props){
     let thumbs;
     let thumbs__b;
     let thumbs__s;
-
-
     const showToast = useShowToast();
 
     const onDrop = useCallback(acceptedFiles => {
@@ -330,10 +328,6 @@ export default function CreateModal (props){
             'hideComments': hideComments,
         }
 
-        console.log(postObject);
-        console.log(files[0].preview);
-
-        
         try{
             await handleCreatePost(files,postObject);
             props.create("esconder");
@@ -585,6 +579,7 @@ export default function CreateModal (props){
     )
 
 }
+
 function useCreatePost(){
     const showToast = useShowToast()
     const [isLoading, setIsLoading] = useState(false)

@@ -7,13 +7,13 @@ const FeedPost = ({ post }) => {
 	const { userProfile } = useGetUserProfileById(post.createdBy);
 
 	return (
-		<div className="feed__post__border">
+		<Box borderBottom={"1px solid rgb(219, 219, 219)"} w={{base: '100%', md: '100%', lg: '630px'}}>
 			<PostHeader post={post} creatorProfile={userProfile} />
-			<Box my={2} borderRadius={4} overflow={"hidden"}>
-				<Image src={post.imageURL} alt={"FEED POST IMG"} width={644} height={644}/>
+			<Box my={2}  borderRadius={4} overflow={"hidden"} width={["full","full","full",630]}  height={[375,469,469,600]}>
+				<Image src={post.imageURL} alt={post.id} objectFit='cover' boxSize={"100%"} />
 			</Box>
 			<PostFooter post={post} creatorProfile={userProfile} />
-		</div>
+		</Box>
 	);
 };
 

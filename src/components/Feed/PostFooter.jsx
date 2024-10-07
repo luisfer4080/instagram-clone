@@ -24,11 +24,11 @@ export default function PostFooter({isProfilePage, post, newComment,creatorProfi
 
 	useEffect(() => {
 		setShowLiked(post.likes.includes(userProfile?.uid))
-	},[isLiked,userProfile])
+	},[userProfile])
 
 	useEffect(() => {
 		setShowSaved(userProfile?.saved.includes(post?.id))
-	},[isSaved,post])
+	},[userProfile])
 
     const handleSubmitComment = async () => {
 		await handlePostComment(post.id, comment);
@@ -47,7 +47,7 @@ export default function PostFooter({isProfilePage, post, newComment,creatorProfi
 	}
 
     return (
-        <Box mb={10} marginTop={"auto"}>
+        <Box mb={10} marginTop={"auto"} px={[2,1,1,0]} >
 			<Flex alignItems={"center"} gap={4} w={"full"} pt={0} mb={2} mt={4}>
 				<Box onClick={hadleShowLike} cursor={"pointer"} fontSize={18} >
 					{!showLiked ? <NotificationsLogo /> : <UnlikeLogo />}

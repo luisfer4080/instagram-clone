@@ -3,8 +3,8 @@ import { UserAuth } from '../../context/AuthContext';
 
 export default function MorePop (){
 
-    const navigate = useNavigate()
-    const { user, logOut } = UserAuth()
+    const navigate = useNavigate();
+    const { user, logOut } = UserAuth();
     
     const handlelogOut = async () => {
         try {

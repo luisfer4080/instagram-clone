@@ -16,9 +16,9 @@ const PostHeader = ({ post, creatorProfile }) => {
             }
         }
     },[creatorProfile])
-
+	
 	return (
-		<Flex justifyContent={"space-between"} alignItems={"center"} w={"full"} my={2}>
+		<Flex justifyContent={"space-between"} alignItems={"center"} w={"full"} my={2} px={[2,1,1,0]}>
 			<Flex alignItems={"center"} gap={2}>
 				{creatorProfile ? (
 					<Link to={`/profile/${creatorProfile.username}`}>

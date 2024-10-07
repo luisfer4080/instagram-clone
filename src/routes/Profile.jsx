@@ -8,11 +8,13 @@ import ProfileHeader from "../components/Profile/ProfileHeader";
 import ProfileImg from "../components/Profile/ProfileImg";
 import ProfileList from "../components/Profile/ProfileList";
 import ProfileHighlight from "../components/Profile/ProfileHighlight";
+import BottomNav from "../components/Feed/BottomNav";
 import UserNotFound from "../components/Profile/UserNotFound";
 import '../css/profile.css';
 import { useState } from "react";
 import useGetUserProfileByUsername from "../hooks/useGetUserProfileByUsername";
 import { useParams } from "react-router-dom";
+import { Flex, Show, Box, Text } from "@chakra-ui/react";
 
 export default function Profile () {
     const [show,setShow] = useState(false);
@@ -54,48 +56,72 @@ export default function Profile () {
 
     return(
         <>
-            <div className="profile__page" onClick={showMenu}>
-                <SideBar menu={handlerMenu} create={handlerCreateModal} show={show} showCreate={createModal} />
-                <div className="profile__container">
-                    <div className="profile">
-                        <div className="profile__flex">
-                            <div className="profile__padding">
-                                <div className="profile__header">
-                                   <ProfileImg profile={userProfile} />  
-                                    <div className="profile__info">
-                                        <ProfileHeader profile={userProfile} />
-                                        <div className="profile__margin"><div></div></div>
-                                        <ProfileList profile={userProfile} />
-                                        <div className="profile__name">
-                                            <div className="profile__name__container">
-                                                <span className="profile__name__span">{userProfile && userProfile.name}</span>
-                                            </div>
-                                            <div className="profile__name__padding"></div> 
-                                        </div>
-                                        <div className="profile__name">
-                                            <div className="profile__name__container">
-                                                <span className="profile__bio__span">{userProfile && userProfile.bio}</span>
-                                            </div>
-                                            <div className="profile__name__padding"></div> 
-                                        </div>
-                                    </div>
-                                </div>
-                                <ProfileHighlight />
-                                <ProfileMenu />
-                                <ProfilePosts user={userProfile} />
-                            </div>
-                        </div>   
-                    </div>
-                    <div className="root__footer__container">
+            <div onClick={showMenu}>
+                <Show above="sm">
+                    <Show above="sm">
+                        <SideBar menu={handlerMenu} create={handlerCreateModal} show={show} showCreate={createModal} />
+                    </Show>
+                    <Box ml={"310px"} w={"935px"} p={"30px 20px 0px 20px"} mr={"65px"} mb={"30px"}>
+                        <Flex>
+                            <ProfileImg profile={userProfile} />    
+                            <Box>
+                                <Box mb={"20px"}>
+                                    <ProfileHeader profile={userProfile} />  
+                                </Box>
+                                <Box>
+                                    <ProfileList profile={userProfile} />
+                                </Box>
+                                <Text fontFamily={"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"} fontWeight={"600"} fontSize={"14px"}>
+                                    {userProfile && userProfile.name}
+                                </Text>
+                                <Text fontFamily={"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"} fontWeight={"300"} fontSize={"12px"} color={"gray"}>
+                                    {userProfile && userProfile.bio}
+                                </Text>
+                            </Box>
+                        </Flex> 
+
+                        <Box mt={"44px"}>
+                            <ProfileHighlight />
+                        </Box>
+                        
+                        <Box pr={"20px"}>
+                            <ProfileMenu />
+                        </Box>
+
+                        <ProfilePosts user={userProfile} />
                         <Footer />
+                    </Box>
+                    <div>
+                        {show && <MorePop />}
                     </div>
-                </div>
-                <div>
-                    {show && <MorePop />}
-                </div>
-                <div>
-                    {createModal && <CreateModal />}
-                </div>
+                    <div>
+                        {createModal && <CreateModal />}
+                    </div>
+                </Show>
+                <Show below="sm">
+                    <Flex>
+                        <ProfileImg profile={userProfile} />    
+                        <Box w={"70%"} mt={"25px"}>
+                            <ProfileList profile={userProfile} />
+                        </Box>
+                    </Flex>
+                    <Text fontFamily={"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"} fontWeight={"600"} fontSize={"14px"} ml={"10px"}>
+                        {userProfile && userProfile.name}
+                    </Text>
+                    <Text fontFamily={"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"} fontWeight={"300"} fontSize={"12px"} color={"gray"} ml={"10px"}>
+                        {userProfile && userProfile.bio}
+                    </Text>
+                    <Box mt={"15px"}>
+                        <ProfileHeader profile={userProfile} />  
+                    </Box>
+                    <Box>
+                        <ProfileMenu />
+                    </Box>
+                    <ProfilePosts user={userProfile} />
+                
+                    <BottomNav />
+                   
+                </Show>
             </div>
         </>
     )

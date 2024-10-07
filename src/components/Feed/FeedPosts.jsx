@@ -6,7 +6,7 @@ const FeedPosts = () => {
 	const { isLoading, posts } = useGetFeedPosts();
 
 	return (
-		<Container maxW={"container.sm"} py={3} px={2}>
+		<Container maxW={"container.sm"} py={[0,0,0,3]} px={[0,0,0,0]}>
 			{isLoading &&
 				[0, 1, 2].map((_, idx) => (
 					<VStack key={idx} gap={4} alignItems={"flex-start"} mb={10}>

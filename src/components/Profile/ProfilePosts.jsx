@@ -1,6 +1,7 @@
 import { Box, Flex, Grid, Skeleton, Text, VStack } from "@chakra-ui/react";
 import useGetUserPosts from '../../hooks/useGetUserPosts';
 import ProfilePost from './ProfilePost';
+import { extendTheme } from '@chakra-ui/react'
 
 export default function ProfilePosts({user}){
     const { isLoading, posts } = useGetUserPosts(user?.uid);

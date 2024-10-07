@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Filter(props) {
+export default function Adjustment(props) {
 
     const handdleDivide = (num) => {
 

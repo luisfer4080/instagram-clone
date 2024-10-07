@@ -71,10 +71,12 @@ const useEditProfile = () => {
             await updateDoc(userDocRef, updatedUser);
             
             setEmailExist(false);
-            setPasswordExist(false)
+            showToast("Success", "Profile updated successfully", "success");
 
         }catch(e){
             showToast("Error", e.message, "error");
+        }finally{
+            setIsUpdating(false);
         }
     }
 

@@ -11,16 +11,20 @@ import {
     useDisclosure
   } from '@chakra-ui/react';
 
+import { Show } from "@chakra-ui/react"; 
+
 export default function ProfileHeader ({profile}) {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
         <div className="profile__user">
-            <a href='#' className="profile__username" role="link" tabIndex="0">
-                <h2 className="profile__username__h2" dir="auto">
-                    {profile && profile.username}
-                </h2>
-            </a>
+            <Show above="sm">
+                <a href='#' className="profile__username" role="link" tabIndex="0">
+                    <h2 className="profile__username__h2" dir="auto">
+                        {profile && profile.username}
+                    </h2>
+                </a>
+            </Show>
             <div className="profile__user__links__container">
                 <div className="profile__user__links">  
                     <div className="edit__profile__link">

@@ -48,11 +48,10 @@ export default function ProfilePost({post}){
 		accesibility: "",
     }); 
 	const [captionCount,setCaptionCount] = useState(post.caption.length)
-    //const { isOpen, onOpen, onClose } = useDisclosure();
-	const { isOpen: isPostOpen , onOpen: onPostOpen, onClose: onPostClose } = useDisclosure()
-	const { isOpen: isMenuOpen , onOpen: onMenuOpen, onClose: onMenuClose } = useDisclosure()
-	const { isOpen: isUpdateOpen , onOpen: onUpdateOpen, onClose: onUpdateClose } = useDisclosure()
-	const [aPost,setAPost] = useState(post)
+	const { isOpen: isPostOpen , onOpen: onPostOpen, onClose: onPostClose } = useDisclosure();
+	const { isOpen: isMenuOpen , onOpen: onMenuOpen, onClose: onMenuClose } = useDisclosure();
+	const { isOpen: isUpdateOpen , onOpen: onUpdateOpen, onClose: onUpdateClose } = useDisclosure();
+	const [aPost,setAPost] = useState(post);
     const showToast = useShowToast();
     const { getCurrent } = UserAuth();
     const currentUser = getCurrent();
