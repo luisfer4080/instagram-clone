@@ -61,7 +61,7 @@ export default function ProfilePost({post}){
     const [isDeleting, setIsDeleting] = useState(false);
 	const [showAccessibility,setShowAccessibility] = useState(false);
 
-	// here i need to create a custom break point for every post v2
+	// here i need to create a custom break point for every post v3
 
     useEffect(() =>{
         if(userProfile){
