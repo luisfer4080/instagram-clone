@@ -61,6 +61,8 @@ export default function ProfilePost({post}){
     const [isDeleting, setIsDeleting] = useState(false);
 	const [showAccessibility,setShowAccessibility] = useState(false);
 
+	// here i need to create a custom break point for every posr
+
     useEffect(() =>{
         if(userProfile){
             if(userProfile.profilePictureUrl != ""){
